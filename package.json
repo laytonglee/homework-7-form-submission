@@ -1,0 +1,17 @@
+{
+  "name": "homework-7-form-submission",
+  "version": "1.0.0",
+  "description": "Simple User Registration App",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "express-handlebars": "^8.0.1",
+    "multiparty": "^4.2.3"
+  }
+}

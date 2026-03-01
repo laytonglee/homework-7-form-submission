@@ -1,0 +1,76 @@
+<div class="w-full max-w-lg bg-white rounded-2xl shadow-lg p-8">
+  <h1 class="text-3xl font-bold text-center text-indigo-600 mb-6">User Registration</h1>
+
+  {{#if error}}
+    <div class="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded-lg text-sm">
+      {{error}}
+    </div>
+  {{/if}}
+
+  <form action="/register" method="POST" enctype="multipart/form-data" class="space-y-5">
+    <!-- Full Name -->
+    <div>
+      <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+      <input
+        type="text"
+        id="fullName"
+        name="fullName"
+        value="{{fullName}}"
+        required
+        placeholder="John Doe"
+        class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+      />
+    </div>
+
+    <!-- Email Address -->
+    <div>
+      <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        value="{{email}}"
+        required
+        placeholder="john@example.com"
+        class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+      />
+    </div>
+
+    <!-- Course Track -->
+    <div>
+      <label for="courseTrack" class="block text-sm font-medium text-gray-700 mb-1">Course Track</label>
+      <select
+        id="courseTrack"
+        name="courseTrack"
+        required
+        class="w-full rounded-lg border border-gray-300 px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
+      >
+        <option value="" disabled selected>Select a track</option>
+        <option value="Web Dev">Web Dev</option>
+        <option value="Data Science">Data Science</option>
+        <option value="UX Design">UX Design</option>
+      </select>
+    </div>
+
+    <!-- Profile Picture -->
+    <div>
+      <label for="profilePicture" class="block text-sm font-medium text-gray-700 mb-1">Profile Picture</label>
+      <input
+        type="file"
+        id="profilePicture"
+        name="profilePicture"
+        accept=".jpg,.jpeg,.png"
+        required
+        class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-600 hover:file:bg-indigo-100"
+      />
+    </div>
+
+    <!-- Submit -->
+    <button
+      type="submit"
+      class="w-full bg-indigo-600 text-white font-semibold py-2.5 rounded-lg hover:bg-indigo-700 transition-colors"
+    >
+      Register
+    </button>
+  </form>
+</div>

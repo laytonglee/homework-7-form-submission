@@ -1,0 +1,38 @@
+<div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-8 text-center">
+  <!-- Profile Picture -->
+  <img
+    src="{{profilePicture}}"
+    alt="Profile picture of {{fullName}}"
+    class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-indigo-200 mb-4"
+  />
+
+  <!-- Welcome Message -->
+  <h1 class="text-2xl font-bold text-indigo-600 mb-1">Welcome, {{fullName}}!</h1>
+  <p class="text-gray-500 text-sm mb-6">Your registration was successful.</p>
+
+  <!-- Registration Details -->
+  <div class="text-left space-y-3 bg-gray-50 rounded-lg p-5">
+    <div class="flex justify-between">
+      <span class="text-sm font-medium text-gray-600">Full Name</span>
+      <span class="text-sm text-gray-800">{{fullName}}</span>
+    </div>
+    <hr class="border-gray-200" />
+    <div class="flex justify-between">
+      <span class="text-sm font-medium text-gray-600">Email</span>
+      <span class="text-sm text-gray-800">{{email}}</span>
+    </div>
+    <hr class="border-gray-200" />
+    <div class="flex justify-between">
+      <span class="text-sm font-medium text-gray-600">Course Track</span>
+      <span class="text-sm text-gray-800">{{courseTrack}}</span>
+    </div>
+  </div>
+
+  <!-- Back Link -->
+  <a
+    href="/register"
+    class="inline-block mt-6 text-sm text-indigo-600 hover:underline"
+  >
+    &larr; Register another user
+  </a>
+</div>
